@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<hi!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -755,90 +755,4 @@ function openMedEditor(id) {
     document.getElementById('ef-peds-fixed').value = m.peds?.fixed||'';
     document.getElementById('ef-peds-repeat').value = m.peds?.repeat||'';
     document.getElementById('ef-peds-max').value = m.peds?.maxDose||'';
-    document.getElementById('ef-peds-route').value = m.peds?.route||'';
-    document.getElementById('ef-notes').value = m.notes||'';
-    buildConcFields(m.concentrations||[]);
-  } else {
-    ['ef-name','ef-class','ef-adult-init','ef-adult-mgkg','ef-adult-fixed','ef-adult-repeat','ef-adult-max','ef-adult-route',
-     'ef-peds-init','ef-peds-mgkg','ef-peds-fixed','ef-peds-repeat','ef-peds-max','ef-peds-route','ef-notes'].forEach(i=>document.getElementById(i).value='');
-    selectedColor = '#e83b3b';
-    buildConcFields([]);
-  }
-  document.querySelectorAll('.color-opt').forEach(o=>o.classList.toggle('selected', o.dataset.color===selectedColor));
-}
-
-function closeMedEditor() { document.getElementById('med-editor-modal').classList.remove('open'); }
-
-function buildConcFields(concs) {
-  document.getElementById('ef-conc-list').innerHTML='';
-  concs.forEach(c=>addConcFieldWith(c.label, c.mgPerMl));
-}
-function addConcField() { addConcFieldWith('',''); }
-function addConcFieldWith(label, mg) {
-  const c = document.getElementById('ef-conc-list');
-  const d = document.createElement('div'); d.className='conc-item';
-  d.innerHTML=`<input type="text" class="form-inp conc-lbl" placeholder="Label (e.g. 1 mg/mL)" value="${label||''}"><input type="number" class="form-inp conc-mg" placeholder="mg/mL" value="${mg||''}" inputmode="decimal" step="any" style="width:90px;"><button class="conc-del-btn" onclick="this.parentElement.remove()">✕</button>`;
-  c.appendChild(d);
-}
-
-function pickColor(el) {
-  selectedColor = el.dataset.color;
-  document.querySelectorAll('.color-opt').forEach(o=>o.classList.toggle('selected', o===el));
-}
-
-function saveMed() {
-  const name = document.getElementById('ef-name').value.trim();
-  if (!name) { alert('Drug name is required.'); return; }
-  const concs = [];
-  document.querySelectorAll('#ef-conc-list .conc-item').forEach(item=>{
-    const lbl = item.querySelector('.conc-lbl').value.trim();
-    const mg = parseFloat(item.querySelector('.conc-mg').value);
-    if (lbl) concs.push({label:lbl, mgPerMl:isNaN(mg)?null:mg});
-  });
-  const aMgkg = parseFloat(document.getElementById('ef-adult-mgkg').value);
-  const pMgkg = parseFloat(document.getElementById('ef-peds-mgkg').value);
-  const med = {
-    id: editingMedId || Date.now(),
-    name, drugClass: document.getElementById('ef-class').value.trim(), color: selectedColor,
-    concentrations: concs,
-    adult: {
-      initLabel: document.getElementById('ef-adult-init').value.trim()||'Adult Dose',
-      mgkg: isNaN(aMgkg)||aMgkg===0 ? null : aMgkg,
-      fixed: (isNaN(aMgkg)||aMgkg===0) ? (document.getElementById('ef-adult-fixed').value.trim()||null) : null,
-      repeat: document.getElementById('ef-adult-repeat').value.trim(),
-      maxDose: parseFloat(document.getElementById('ef-adult-max').value)||null,
-      route: document.getElementById('ef-adult-route').value.trim()
-    },
-    peds: {
-      initLabel: document.getElementById('ef-peds-init').value.trim()||'Peds Dose',
-      mgkg: isNaN(pMgkg)||pMgkg===0 ? null : pMgkg,
-      fixed: (isNaN(pMgkg)||pMgkg===0) ? (document.getElementById('ef-peds-fixed').value.trim()||null) : null,
-      repeat: document.getElementById('ef-peds-repeat').value.trim(),
-      maxDose: parseFloat(document.getElementById('ef-peds-max').value)||null,
-      route: document.getElementById('ef-peds-route').value.trim()
-    },
-    notes: document.getElementById('ef-notes').value.trim()
-  };
-  if (editingMedId) { const i=appData.meds.findIndex(m=>m.id===editingMedId); if(i>=0) appData.meds[i]=med; }
-  else appData.meds.push(med);
-  saveData(); closeMedEditor(); renderAdminList(); renderMeds();
-}
-
-// ═══════════════════════════ INIT ═══════════════════════════
-renderMeds();
-buildBroselow();
-updateDeptDisplay();
-</script>
-
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('SW registered:', reg.scope))
-      .catch(err => console.warn('SW registration failed:', err));
-  });
-}
-</script>
-
-</body>
-</html>
+    
