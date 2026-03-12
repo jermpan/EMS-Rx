@@ -1,0 +1,655 @@
+{
+  "_instructions": {
+    "how_to_edit": "Edit this file to update medications for all app users. After saving and uploading to GitHub, all crew members will receive updates automatically the next time they open the app with internet access.",
+    "fields": {
+      "name": "Drug name as it appears in the app",
+      "drugClass": "Drug class shown under the name",
+      "color": "Hex color code for the card accent",
+      "concentrations": "List of concentrations you carry. label = display text, mgPerMl = numeric mg per mL (null for non-injectable)",
+      "adult.initLabel": "Label shown for the adult dose row",
+      "adult.mgkg": "Weight-based dose in mg/kg (null if fixed dose)",
+      "adult.fixed": "Fixed dose text if not weight-based (null if weight-based)",
+      "adult.repeat": "Repeat dose instructions text",
+      "adult.maxDose": "Maximum dose in mg (null if no cap)",
+      "adult.route": "Route of administration",
+      "peds.initLabel": "Label shown for the pediatric dose row",
+      "peds.mgkg": "Pediatric weight-based dose in mg/kg (null if fixed)",
+      "peds.fixed": "Pediatric fixed dose text (null if weight-based)",
+      "peds.repeat": "Pediatric repeat dose instructions",
+      "peds.maxDose": "Pediatric maximum dose in mg (null if no cap)",
+      "peds.route": "Pediatric route of administration",
+      "notes": "Clinical notes shown at bottom of card"
+    }
+  },
+  "dept": "Marietta Fire Department",
+  "version": "12/20/2024",
+  "meds": [
+    {
+      "id": 1,
+      "name": "Epinephrine",
+      "drugClass": "Sympathomimetic · Vasopressor",
+      "color": "#e83b3b",
+      "concentrations": [
+        {
+          "label": "1:10,000 — 0.1 mg/mL (cardiac)",
+          "mgPerMl": 0.1
+        },
+        {
+          "label": "1:1,000 — 1 mg/mL (anaphylaxis IM)",
+          "mgPerMl": 1.0
+        }
+      ],
+      "adult": {
+        "initLabel": "Cardiac Arrest",
+        "mgkg": null,
+        "fixed": "1 mg IV/IO",
+        "repeat": "q3–5 min",
+        "maxDose": null,
+        "route": "IV/IO"
+      },
+      "peds": {
+        "initLabel": "Cardiac Arrest",
+        "mgkg": 0.01,
+        "fixed": null,
+        "repeat": "q3–5 min",
+        "maxDose": null,
+        "route": "IV/IO"
+      },
+      "notes": "ADULT cardiac arrest: 1 mg (1:10,000) IV/IO q3-5 min. PEDS cardiac arrest: 0.01 mg/kg (1:10,000) IV/IO q3-5 min. Anaphylaxis adult: 0.3 mg (1:1,000) IM. Anaphylaxis peds: 0.01 mg/kg (1:1,000) IM max 0.3 mg, may repeat q5 min ×2."
+    },
+    {
+      "id": 2,
+      "name": "Amiodarone",
+      "drugClass": "Antiarrhythmic · Class III",
+      "color": "#a855f7",
+      "concentrations": [
+        {
+          "label": "50 mg/mL (standard vial)",
+          "mgPerMl": 50
+        }
+      ],
+      "adult": {
+        "initLabel": "VF/Pulseless VT — 1st dose",
+        "mgkg": null,
+        "fixed": "300 mg IV/IO",
+        "repeat": "150 mg once",
+        "maxDose": 450,
+        "route": "IV/IO rapid push"
+      },
+      "peds": {
+        "initLabel": "VF/Pulseless VT",
+        "mgkg": 5,
+        "fixed": null,
+        "repeat": "Repeat ×2 q5 min",
+        "maxDose": 150,
+        "route": "IV/IO"
+      },
+      "notes": "ADULT VF/pulseless VT: 300 mg IV/IO rapid push, then 150 mg once. Stable VT: 150 mg IV over 10 min. PEDS: 5 mg/kg IV/IO max 150 mg over 20 min. Drip: 150 mg into 100 mL NS = 1.5 mg/mL. Monitor for hypotension and respiratory depression."
+    },
+    {
+      "id": 3,
+      "name": "Adenosine",
+      "drugClass": "Antiarrhythmic · Nodal Agent",
+      "color": "#2196f3",
+      "concentrations": [
+        {
+          "label": "3 mg/mL (standard)",
+          "mgPerMl": 3
+        }
+      ],
+      "adult": {
+        "initLabel": "SVT — 1st Dose",
+        "mgkg": null,
+        "fixed": "6 mg RAPID IVP",
+        "repeat": "12 mg RAPID IVP ×1",
+        "maxDose": 18,
+        "route": "Rapid IV Push — AC preferred"
+      },
+      "peds": {
+        "initLabel": "SVT — 1st Dose",
+        "mgkg": 0.1,
+        "fixed": null,
+        "repeat": "0.2 mg/kg RAPID IVP — max 12 mg",
+        "maxDose": 6,
+        "route": "Rapid IV Push"
+      },
+      "notes": "MUST give as rapid IV push (1-2 sec). Large bore AC IV preferred. Immediately flush with 20 mL NS rapid push. Adult: 6 mg 1st dose, 12 mg if no conversion. Peds: 0.1 mg/kg max 6 mg, then 0.2 mg/kg max 12 mg. Warn patient of chest tightness."
+    },
+    {
+      "id": 4,
+      "name": "Atropine",
+      "drugClass": "Anticholinergic · Parasympatholytic",
+      "color": "#14b8a6",
+      "concentrations": [
+        {
+          "label": "0.1 mg/mL (1 mg/10 mL)",
+          "mgPerMl": 0.1
+        },
+        {
+          "label": "1 mg/mL",
+          "mgPerMl": 1.0
+        }
+      ],
+      "adult": {
+        "initLabel": "Symptomatic Bradycardia",
+        "mgkg": null,
+        "fixed": "0.5–1 mg IV",
+        "repeat": "q3–5 min — max 3 mg",
+        "maxDose": 3,
+        "route": "IV"
+      },
+      "peds": {
+        "initLabel": "Symptomatic Bradycardia",
+        "mgkg": 0.02,
+        "fixed": null,
+        "repeat": "Contact Medical Control for additional",
+        "maxDose": 1.0,
+        "route": "IV/IO"
+      },
+      "notes": "ADULT bradycardia: 0.5–1 mg IV, repeat q3–5 min, max 3 mg. Organophosphate/nerve agent: 2 mg IV initial, may repeat 2 mg q3 min (severe: 4–6 mg). PEDS: 0.02 mg/kg, min dose 0.1 mg, max dose 1 mg."
+    },
+    {
+      "id": 5,
+      "name": "Lidocaine",
+      "drugClass": "Antiarrhythmic · Class Ib",
+      "color": "#f5a623",
+      "concentrations": [
+        {
+          "label": "2% — 20 mg/mL",
+          "mgPerMl": 20
+        },
+        {
+          "label": "1% — 10 mg/mL",
+          "mgPerMl": 10
+        }
+      ],
+      "adult": {
+        "initLabel": "VF/VT (alt. to Amiodarone)",
+        "mgkg": 1.0,
+        "fixed": null,
+        "repeat": "0.5–0.75 mg/kg q5–10 min",
+        "maxDose": 3,
+        "route": "IV/IO"
+      },
+      "peds": {
+        "initLabel": "VF/VT",
+        "mgkg": 1.0,
+        "fixed": null,
+        "repeat": "Contact Medical Control",
+        "maxDose": null,
+        "route": "IV/IO"
+      },
+      "notes": "VF/Pulseless VT adult: 1–1.5 mg/kg IV/IO, repeat 0.5–0.75 mg/kg q5-10 min. IO pre-medication: 40 mg (2% lidocaine) slow IV/IO before fluids; peds 0.5 mg/kg. Maintenance drip: 100 mg into 100 mL NS = 1 mg/mL at 120 gtts/min."
+    },
+    {
+      "id": 6,
+      "name": "Naloxone (Narcan)",
+      "drugClass": "Opioid Antagonist",
+      "color": "#14b8a6",
+      "concentrations": [
+        {
+          "label": "0.4 mg/mL",
+          "mgPerMl": 0.4
+        },
+        {
+          "label": "1 mg/mL",
+          "mgPerMl": 1.0
+        },
+        {
+          "label": "2 mg/mL (IN)",
+          "mgPerMl": 2.0
+        }
+      ],
+      "adult": {
+        "initLabel": "Opioid Overdose",
+        "mgkg": null,
+        "fixed": "0.4–1 mg slow IV/IM/IO",
+        "repeat": "2 mg IN — repeat once if RR<12",
+        "maxDose": 2,
+        "route": "IV/IM/IO/IN"
+      },
+      "peds": {
+        "initLabel": "Opioid/Resp Depression",
+        "mgkg": 0.1,
+        "fixed": null,
+        "repeat": "0.2 mg/kg IN — max 2 mg",
+        "maxDose": 2.0,
+        "route": "slow IV/IO or IN"
+      },
+      "notes": "ADULT: 0.4–1 mg slow IV/IM/IO, or 2 mg IN. May repeat once if RR <12. PEDS: 0.1 mg/kg slow IV/IO or 0.2 mg/kg IN, max 2 mg. Titrate to adequate respirations — NOT full reversal."
+    },
+    {
+      "id": 7,
+      "name": "Midazolam (Versed)",
+      "drugClass": "Benzodiazepine · Sedative",
+      "color": "#6366f1",
+      "concentrations": [
+        {
+          "label": "5 mg/mL",
+          "mgPerMl": 5
+        },
+        {
+          "label": "1 mg/mL",
+          "mgPerMl": 1
+        }
+      ],
+      "adult": {
+        "initLabel": "Sedation / Seizure",
+        "mgkg": null,
+        "fixed": "2.5 mg IV",
+        "repeat": "5 mg IM or IN",
+        "maxDose": 5,
+        "route": "IV/IM/IN"
+      },
+      "peds": {
+        "initLabel": "Seizure / Sedation",
+        "mgkg": 0.1,
+        "fixed": null,
+        "repeat": "0.2 mg/kg IM or IN — max 5 mg",
+        "maxDose": 2.5,
+        "route": "IV/IM/IN"
+      },
+      "notes": "ADULT sedation: 2.5 mg IV. Seizure: 2.5 mg IV or 5 mg IM/IN, may repeat ×1 in 5 min. PEDS: 0.1 mg/kg IV (max 2.5 mg) or 0.2 mg/kg IM/IN (max 5 mg). Monitor for respiratory depression and hypotension."
+    },
+    {
+      "id": 8,
+      "name": "Ketamine — Acute Agitation",
+      "drugClass": "Dissociative Anesthetic",
+      "color": "#ec4899",
+      "concentrations": [
+        {
+          "label": "500 mg/10 mL (50 mg/mL)",
+          "mgPerMl": 50
+        },
+        {
+          "label": "200 mg/20 mL (10 mg/mL)",
+          "mgPerMl": 10
+        }
+      ],
+      "adult": {
+        "initLabel": "Acute Agitation — IV",
+        "mgkg": 1.0,
+        "fixed": null,
+        "repeat": "2 mg/kg IM if no IV access — max 400 mg",
+        "maxDose": 400,
+        "route": "slow IV push or IM"
+      },
+      "peds": {
+        "initLabel": "Acute Agitation",
+        "mgkg": 1.0,
+        "fixed": null,
+        "repeat": "2 mg/kg IM — max 400 mg",
+        "maxDose": 400,
+        "route": "slow IV push or IM"
+      },
+      "notes": "Acute agitation: 1 mg/kg slow IV push OR 2 mg/kg IM. Max dose 400 mg. Monitor airway closely — have suction and BVM ready. May cause laryngospasm. Emergence reactions possible — minimize stimulation."
+    },
+    {
+      "id": 20,
+      "name": "Ketamine — Pain Management",
+      "drugClass": "Dissociative Anesthetic · Analgesic",
+      "color": "#f472b6",
+      "concentrations": [
+        {
+          "label": "500 mg/10 mL (50 mg/mL)",
+          "mgPerMl": 50
+        },
+        {
+          "label": "200 mg/20 mL (10 mg/mL)",
+          "mgPerMl": 10
+        }
+      ],
+      "adult": {
+        "initLabel": "Pain Management — IV (0.1–0.2 mg/kg)",
+        "mgkg": 0.1,
+        "fixed": null,
+        "repeat": "0.4 mg/kg IM — max 40 mg — may repeat ×1 after 10 min up to max",
+        "maxDose": 20,
+        "route": "slow IV push or IM"
+      },
+      "peds": {
+        "initLabel": "Pain Management — IV (0.1–0.2 mg/kg)",
+        "mgkg": 0.1,
+        "fixed": null,
+        "repeat": "0.4 mg/kg IM — max 40 mg — may repeat ×1 after 10 min up to max",
+        "maxDose": 20,
+        "route": "slow IV push or IM"
+      },
+      "notes": "Pain management: 0.1–0.2 mg/kg slow IV push (max 20 mg) OR 0.4 mg/kg IM (max 40 mg). May repeat ×1 after 10 min up to max dose. Sub-dissociative dose — patient remains conscious. Monitor for dizziness, nausea, and dysphoria."
+    },
+    {
+      "id": 9,
+      "name": "Aspirin (ASA)",
+      "drugClass": "Antiplatelet · NSAID",
+      "color": "#e83b3b",
+      "concentrations": [],
+      "adult": {
+        "initLabel": "Suspected ACS / Chest Pain",
+        "mgkg": null,
+        "fixed": "324 mg PO chewed",
+        "repeat": "None",
+        "maxDose": null,
+        "route": "PO — chew, do not swallow whole"
+      },
+      "peds": {
+        "initLabel": "Pediatric",
+        "mgkg": null,
+        "fixed": "Contraindicated <12 yrs",
+        "repeat": "—",
+        "maxDose": null,
+        "route": "—"
+      },
+      "notes": "Give ASAP for suspected ACS/chest pain. Four 81 mg baby ASA chewed. Confirm no aspirin allergy, no active GI bleed."
+    },
+    {
+      "id": 10,
+      "name": "Nitroglycerin",
+      "drugClass": "Nitrate · Vasodilator",
+      "color": "#a855f7",
+      "concentrations": [
+        {
+          "label": "0.4 mg/spray (SL)",
+          "mgPerMl": null
+        }
+      ],
+      "adult": {
+        "initLabel": "Chest Pain / ACS",
+        "mgkg": null,
+        "fixed": "0.4 mg SL",
+        "repeat": "q5 min × 3",
+        "maxDose": 1.2,
+        "route": "SL Spray or Tab"
+      },
+      "peds": {
+        "initLabel": "Pediatric",
+        "mgkg": null,
+        "fixed": "Not routinely used",
+        "repeat": "—",
+        "maxDose": null,
+        "route": "—"
+      },
+      "notes": "CHECK BP before EVERY dose — HOLD if SBP <90 mmHg. ABSOLUTE CI: Viagra/sildenafil within 24 hr, Cialis/tadalafil within 48 hr, Levitra/vardenafil within 24 hr. CI in suspected RV infarct."
+    },
+    {
+      "id": 11,
+      "name": "Diphenhydramine (Benadryl)",
+      "drugClass": "Antihistamine · H1 Blocker",
+      "color": "#f97316",
+      "concentrations": [
+        {
+          "label": "50 mg/mL",
+          "mgPerMl": 50
+        },
+        {
+          "label": "10 mg/mL",
+          "mgPerMl": 10
+        }
+      ],
+      "adult": {
+        "initLabel": "Allergic Reaction / Anaphylaxis",
+        "mgkg": null,
+        "fixed": "50 mg IV or IM",
+        "repeat": "Once if needed",
+        "maxDose": 50,
+        "route": "IV/IM"
+      },
+      "peds": {
+        "initLabel": "Allergic Reaction",
+        "mgkg": 1.0,
+        "fixed": null,
+        "repeat": "Once if needed",
+        "maxDose": 50,
+        "route": "IV/IM"
+      },
+      "notes": "ADULT: 50 mg IV or IM. PEDS: 1 mg/kg IV or IM. Give with epinephrine for anaphylaxis — not a replacement. Monitor for sedation."
+    },
+    {
+      "id": 12,
+      "name": "Albuterol",
+      "drugClass": "Beta-2 Agonist · Bronchodilator",
+      "color": "#00c896",
+      "concentrations": [
+        {
+          "label": "2.5 mg/3 mL unit dose (nebulized)",
+          "mgPerMl": 0.833
+        }
+      ],
+      "adult": {
+        "initLabel": "Bronchospasm / Wheeze",
+        "mgkg": null,
+        "fixed": "2.5 mg nebulized",
+        "repeat": "Continuous as needed",
+        "maxDose": null,
+        "route": "Nebulized"
+      },
+      "peds": {
+        "initLabel": "Bronchospasm / Wheeze",
+        "mgkg": null,
+        "fixed": "2.5 mg nebulized",
+        "repeat": "Continuous as needed",
+        "maxDose": null,
+        "route": "Nebulized"
+      },
+      "notes": "Adult and peds same dose: 2.5 mg nebulized. May run continuously as needed. Monitor HR — may cause tachycardia."
+    },
+    {
+      "id": 13,
+      "name": "Glucagon",
+      "drugClass": "Pancreatic Hormone",
+      "color": "#00c896",
+      "concentrations": [
+        {
+          "label": "1 mg/mL (reconstituted)",
+          "mgPerMl": 1
+        }
+      ],
+      "adult": {
+        "initLabel": "Hypoglycemia (No IV) / Beta-blocker OD",
+        "mgkg": null,
+        "fixed": "1–2 mg IM",
+        "repeat": "Once if no response",
+        "maxDose": 2,
+        "route": "IM/IN"
+      },
+      "peds": {
+        "initLabel": "Hypoglycemia (No IV)",
+        "mgkg": 0.1,
+        "fixed": null,
+        "repeat": "0.2 mg/kg IN — max 1 mg",
+        "maxDose": 1.0,
+        "route": "IM/IN"
+      },
+      "notes": "ADULT hypoglycemia (no IV): 1 mg IM or 2 mg IN. Beta-blocker OD: 2 mg IV. PEDS: 0.1 mg/kg IM or 0.2 mg/kg IN, max 1 mg. Reconstitute with provided diluent only. Recheck BGL after admin."
+    },
+    {
+      "id": 14,
+      "name": "Dextrose",
+      "drugClass": "Carbohydrate · Glucose",
+      "color": "#f5a623",
+      "concentrations": [
+        {
+          "label": "D50W — 500 mg/mL",
+          "mgPerMl": 500
+        },
+        {
+          "label": "D25W — 250 mg/mL (peds >20 kg)",
+          "mgPerMl": 250
+        },
+        {
+          "label": "D10W — 100 mg/mL (peds ≤20 kg)",
+          "mgPerMl": 100
+        }
+      ],
+      "adult": {
+        "initLabel": "Hypoglycemia (BGL <60)",
+        "mgkg": null,
+        "fixed": "25 g (50 mL D50) IV",
+        "repeat": "Recheck BGL — repeat if needed",
+        "maxDose": null,
+        "route": "IV"
+      },
+      "peds": {
+        "initLabel": "Hypoglycemia (BGL <60)",
+        "mgkg": 0.5,
+        "fixed": null,
+        "repeat": "Recheck BGL",
+        "maxDose": null,
+        "route": "IV"
+      },
+      "notes": "ADULT: 25 g (50 mL D50W) IV. PEDS ≤20 kg: D10W 0.5 g/kg (5 mL/kg). PEDS >20 kg: D25W 0.5 g/kg (2 mL/kg). Confirm hypoglycemia with glucometer first. D50 is viscous — use large bore IV."
+    },
+    {
+      "id": 15,
+      "name": "Magnesium Sulfate",
+      "drugClass": "Electrolyte · Antiarrhythmic",
+      "color": "#22d3ee",
+      "concentrations": [
+        {
+          "label": "500 mg/mL (50%) — dilute before use",
+          "mgPerMl": 500
+        },
+        {
+          "label": "20 mg/mL (2g in 100 mL NS — drip)",
+          "mgPerMl": 20
+        }
+      ],
+      "adult": {
+        "initLabel": "Torsades / VF / OB Seizure",
+        "mgkg": null,
+        "fixed": "2 g IV/IO",
+        "repeat": "Per Medical Control",
+        "maxDose": 4,
+        "route": "IV/IO"
+      },
+      "peds": {
+        "initLabel": "Hypomagnesemia",
+        "mgkg": 25,
+        "fixed": null,
+        "repeat": "Per Medical Control",
+        "maxDose": 2000,
+        "route": "IV slow"
+      },
+      "notes": "VF/Torsades adult: 2 g IV/IO diluted in 10 mL NS over 1-2 min. OB/eclampsia: 2 g in 100 mL NS over 10 min. Peds: 25–50 mg/kg IV max 2 g. Monitor for respiratory depression and loss of reflexes."
+    },
+    {
+      "id": 16,
+      "name": "Methylprednisolone (Solu-Medrol)",
+      "drugClass": "Corticosteroid · Anti-inflammatory",
+      "color": "#f97316",
+      "concentrations": [
+        {
+          "label": "125 mg/2 mL (62.5 mg/mL)",
+          "mgPerMl": 62.5
+        }
+      ],
+      "adult": {
+        "initLabel": "Asthma / Allergic Reaction",
+        "mgkg": null,
+        "fixed": "125 mg IV/IM",
+        "repeat": "None in field",
+        "maxDose": 125,
+        "route": "IV/IM"
+      },
+      "peds": {
+        "initLabel": "Asthma / Allergic Reaction",
+        "mgkg": 2.0,
+        "fixed": null,
+        "repeat": "None in field",
+        "maxDose": 125,
+        "route": "IV"
+      },
+      "notes": "ADULT: 125 mg IV/IM. PEDS: 2 mg/kg IV, max 125 mg. Slow onset (4–6 hr) — give with albuterol and epinephrine as indicated."
+    },
+    {
+      "id": 17,
+      "name": "Sodium Bicarbonate",
+      "drugClass": "Alkalinizing Agent · Buffer",
+      "color": "#6366f1",
+      "concentrations": [
+        {
+          "label": "1 mEq/mL (8.4% — standard)",
+          "mgPerMl": 84
+        },
+        {
+          "label": "0.5 mEq/mL (4.2% — peds)",
+          "mgPerMl": 42
+        }
+      ],
+      "adult": {
+        "initLabel": "Acidosis / TCA OD / Hyperkalemia",
+        "mgkg": 1.0,
+        "fixed": null,
+        "repeat": "Per Medical Control",
+        "maxDose": null,
+        "route": "IV/IO"
+      },
+      "peds": {
+        "initLabel": "Acidosis / Drug OD",
+        "mgkg": 1.0,
+        "fixed": null,
+        "repeat": "Per Medical Control",
+        "maxDose": null,
+        "route": "IV/IO"
+      },
+      "notes": "Dose: 1 mEq/kg IV/IO. Do NOT mix with calcium — precipitates. Flush line between drugs. Peds: use 4.2% (0.5 mEq/mL) solution."
+    },
+    {
+      "id": 18,
+      "name": "Calcium Gluconate 10%",
+      "drugClass": "Electrolyte · Cardioprotective",
+      "color": "#22d3ee",
+      "concentrations": [
+        {
+          "label": "100 mg/mL (10%)",
+          "mgPerMl": 100
+        }
+      ],
+      "adult": {
+        "initLabel": "Hyperkalemia / CCB Overdose",
+        "mgkg": null,
+        "fixed": "1 g IV/IO",
+        "repeat": "Per Medical Control",
+        "maxDose": 2,
+        "route": "IV/IO slow"
+      },
+      "peds": {
+        "initLabel": "Hyperkalemia",
+        "mgkg": 20,
+        "fixed": null,
+        "repeat": "Per Medical Control",
+        "maxDose": 1000,
+        "route": "IV/IO slow"
+      },
+      "notes": "ADULT: 1 g IV/IO slow. PEDS: 20 mg/kg IV/IO slow, max 1 g. Do NOT mix with sodium bicarbonate. Give slowly — rapid admin can cause bradycardia. Monitor cardiac rhythm."
+    },
+    {
+      "id": 19,
+      "name": "Hydroxocobalamin (Cyanokit)",
+      "drugClass": "Cyanide Antidote",
+      "color": "#e83b3b",
+      "concentrations": [
+        {
+          "label": "25 mg/mL (5g in 200 mL NS)",
+          "mgPerMl": 25
+        }
+      ],
+      "adult": {
+        "initLabel": "Cyanide Poisoning / Smoke Inhalation",
+        "mgkg": null,
+        "fixed": "5 g IV over 15 min",
+        "repeat": "Additional 5 g with Medical Control",
+        "maxDose": 15,
+        "route": "slow IV/IO drip"
+      },
+      "peds": {
+        "initLabel": "Cyanide Poisoning",
+        "mgkg": 70,
+        "fixed": null,
+        "repeat": "Per Medical Control",
+        "maxDose": 5000,
+        "route": "slow IV/IO over 15 min"
+      },
+      "notes": "Reconstitute 5 g in 200 mL NS. Use SEPARATE IV/IO line. Deliver at ~15 mL/min using kit drip set. Will turn urine/skin red — normal. Indicated for smoke inhalation with suspected cyanide."
+    }
+  ]
+}
