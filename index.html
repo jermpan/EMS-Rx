@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -43,379 +42,380 @@ body { font-family: var(--body); background: var(--bg); color: var(--text); min-
 body::after { content:''; position:fixed; inset:0; background: repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.04) 3px,rgba(0,0,0,0.04) 4px); pointer-events:none; z-index:9999; }
 
 /* HEADER */
-.app-header { position:sticky; top:0; z-index:500; background:rgba(6,13,26,0.97); border-bottom:1px solid var(–border); backdrop-filter:blur(16px); padding:0 14px; }
+.app-header { position:sticky; top:0; z-index:500; background:rgba(6,13,26,0.97); border-bottom:1px solid var(--border); backdrop-filter:blur(16px); padding:0 14px; }
 .header-row { display:flex; align-items:center; gap:10px; padding:11px 0 9px; }
-.logo-cross { width:32px; height:32px; background:var(–accent); border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:17px; box-shadow:0 0 14px var(–accent-glow); flex-shrink:0; }
-.logo-text h1 { font-family:var(–display); font-size:1.4rem; font-weight:800; letter-spacing:3px; color:#fff; line-height:1; text-transform:uppercase; }
-.logo-text p { font-family:var(–mono); font-size:0.65rem; color:var(–text-dim); letter-spacing:2px; margin-top:2px; }
+.logo-cross { width:32px; height:32px; background:var(--accent); border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:17px; box-shadow:0 0 14px var(--accent-glow); flex-shrink:0; }
+.logo-text h1 { font-family:var(--display); font-size:1.4rem; font-weight:800; letter-spacing:3px; color:#fff; line-height:1; text-transform:uppercase; }
+.logo-text p { font-family:var(--mono); font-size:0.65rem; color:var(--text-dim); letter-spacing:2px; margin-top:2px; }
 .header-spacer { flex:1; }
-.admin-btn { background:transparent; border:1px solid var(–border2); border-radius:7px; color:var(–text-dim); padding:6px 10px; font-family:var(–mono); font-size:0.62rem; letter-spacing:1px; cursor:pointer; }
+.admin-btn { background:transparent; border:1px solid var(--border2); border-radius:7px; color:var(--text-dim); padding:6px 10px; font-family:var(--mono); font-size:0.62rem; letter-spacing:1px; cursor:pointer; }
 .nav-tabs { display:flex; gap:2px; }
-.nav-tab { flex:1; padding:8px 4px; background:transparent; border:none; border-bottom:2px solid transparent; color:var(–text-muted); font-family:var(–display); font-size:0.95rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; transition:all 0.2s; }
-.nav-tab.active { color:var(–accent); border-bottom-color:var(–accent); }
+.nav-tab { flex:1; padding:8px 4px; background:transparent; border:none; border-bottom:2px solid transparent; color:var(--text-muted); font-family:var(--display); font-size:0.95rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer; transition:all 0.2s; }
+.nav-tab.active { color:var(--accent); border-bottom-color:var(--accent); }
 
 /* PAGES */
 .page { display:none; padding:13px 13px 80px; }
 .page.active { display:block; }
 
 /* WEIGHT BAR */
-.weight-bar { background:var(–surface); border:1px solid var(–border); border-radius:11px; padding:12px 13px; margin-bottom:12px; position:relative; overflow:hidden; }
-.weight-bar::before { content:’’; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(–accent),transparent); }
-.wb-label { font-family:var(–mono); font-size:0.72rem; color:var(–text-dim); letter-spacing:2px; margin-bottom:9px; }
+.weight-bar { background:var(--surface); border:1px solid var(--border); border-radius:11px; padding:12px 13px; margin-bottom:12px; position:relative; overflow:hidden; }
+.weight-bar::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--accent),transparent); }
+.wb-label { font-family:var(--mono); font-size:0.72rem; color:var(--text-dim); letter-spacing:2px; margin-bottom:9px; }
 .wb-inputs { display:grid; grid-template-columns:1fr 26px 1fr; gap:7px; align-items:end; }
-.wb-field label { display:block; font-family:var(–mono); font-size:0.72rem; color:var(–text-dim); letter-spacing:1px; margin-bottom:4px; }
-.field-inp { width:100%; background:var(–surface2); border:1px solid var(–border); border-radius:8px; padding:10px; color:var(–text); font-family:var(–mono); font-size:1.1rem; outline:none; -webkit-appearance:none; transition:border-color 0.2s; }
-.field-inp:focus { border-color:var(–blue); }
-.field-inp.kg-out { color:var(–blue); border-color:rgba(33,150,243,0.3); }
-.field-inp::placeholder { color:var(–text-muted); }
-.wb-arrow { text-align:center; color:var(–text-muted); font-size:0.9rem; padding-bottom:10px; }
+.wb-field label { display:block; font-family:var(--mono); font-size:0.72rem; color:var(--text-dim); letter-spacing:1px; margin-bottom:4px; }
+.field-inp { width:100%; background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:10px; color:var(--text); font-family:var(--mono); font-size:1.1rem; outline:none; -webkit-appearance:none; transition:border-color 0.2s; }
+.field-inp:focus { border-color:var(--blue); }
+.field-inp.kg-out { color:var(--blue); border-color:rgba(33,150,243,0.3); }
+.field-inp::placeholder { color:var(--text-muted); }
+.wb-arrow { text-align:center; color:var(--text-muted); font-size:0.9rem; padding-bottom:10px; }
 
 /* DISCLAIMER */
 .disclaimer { background:rgba(232,59,59,0.05); border:1px solid rgba(232,59,59,0.18); border-radius:8px; padding:9px 11px; margin-bottom:12px; display:flex; gap:7px; }
 .disclaimer-text { font-size:0.8rem; color:#b07070; line-height:1.5; }
 
 /* SECTION LABEL */
-.section-label { font-family:var(–mono); font-size:0.72rem; color:var(–text-muted); letter-spacing:2.5px; text-transform:uppercase; padding:6px 1px 5px; display:flex; align-items:center; gap:8px; }
-.section-label::after { content:’’; flex:1; height:1px; background:var(–border); }
+.section-label { font-family:var(--mono); font-size:0.72rem; color:var(--text-muted); letter-spacing:2.5px; text-transform:uppercase; padding:6px 1px 5px; display:flex; align-items:center; gap:8px; }
+.section-label::after { content:''; flex:1; height:1px; background:var(--border); }
 
 /* MED CARDS */
-.med-card { background:var(–surface); border:1px solid var(–border); border-radius:11px; margin-bottom:9px; overflow:hidden; transition:border-color 0.2s; }
-.med-card.open { border-color:var(–border2); }
+.med-card { background:var(--surface); border:1px solid var(--border); border-radius:11px; margin-bottom:9px; overflow:hidden; transition:border-color 0.2s; }
+.med-card.open { border-color:var(--border2); }
 .med-header { display:flex; align-items:center; gap:10px; padding:12px 13px; cursor:pointer; user-select:none; }
 .med-pill { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
 .med-name-wrap { flex:1; min-width:0; }
-.med-name { font-family:var(–display); font-size:1.15rem; font-weight:700; letter-spacing:1px; line-height:1; }
-.med-class { font-family:var(–mono); font-size:0.68rem; color:var(–text-dim); letter-spacing:1px; margin-top:2px; }
-.med-chevron { font-size:0.75rem; color:var(–text-muted); transition:transform 0.25s; flex-shrink:0; }
-.med-card.open .med-chevron { transform:rotate(180deg); color:var(–accent); }
-.med-body { display:none; padding:0 13px 13px; border-top:1px solid var(–border); }
+.med-name { font-family:var(--display); font-size:1.15rem; font-weight:700; letter-spacing:1px; line-height:1; }
+.med-class { font-family:var(--mono); font-size:0.68rem; color:var(--text-dim); letter-spacing:1px; margin-top:2px; }
+.med-chevron { font-size:0.75rem; color:var(--text-muted); transition:transform 0.25s; flex-shrink:0; }
+.med-card.open .med-chevron { transform:rotate(180deg); color:var(--accent); }
+.med-body { display:none; padding:0 13px 13px; border-top:1px solid var(--border); }
 .med-card.open .med-body { display:block; }
 
 /* CONCENTRATION */
 .conc-select-row { display:flex; align-items:center; gap:7px; margin:9px 0 5px; }
-.conc-select-row label { font-family:var(–mono); font-size:0.72rem; color:var(–text-dim); letter-spacing:1px; white-space:nowrap; }
-.conc-sel { flex:1; background:var(–surface2); border:1px solid var(–border); border-radius:6px; padding:6px 9px; color:var(–blue); font-family:var(–mono); font-size:0.85rem; outline:none; -webkit-appearance:none; }
+.conc-select-row label { font-family:var(--mono); font-size:0.72rem; color:var(--text-dim); letter-spacing:1px; white-space:nowrap; }
+.conc-sel { flex:1; background:var(--surface2); border:1px solid var(--border); border-radius:6px; padding:6px 9px; color:var(--blue); font-family:var(--mono); font-size:0.85rem; outline:none; -webkit-appearance:none; }
 
 /* DOSE ROWS */
 .dose-section { margin-top:7px; }
-.dose-section-title { font-family:var(–mono); font-size:0.7rem; color:var(–text-muted); letter-spacing:2px; text-transform:uppercase; margin-bottom:5px; }
+.dose-section-title { font-family:var(--mono); font-size:0.7rem; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; margin-bottom:5px; }
 .dose-row { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-bottom:1px solid rgba(26,48,85,0.5); gap:8px; }
 .dose-row:last-child { border-bottom:none; }
 .dose-info { flex:1; min-width:0; }
-.dose-title { font-family:var(–display); font-size:1.05rem; font-weight:600; letter-spacing:0.5px; color:var(–text); line-height:1.2; }
-.dose-formula { font-family:var(–mono); font-size:0.72rem; color:var(–text-dim); margin-top:2px; }
-.dose-repeat { font-family:var(–mono); font-size:0.88rem; color:var(–yellow); margin-top:1px; }
+.dose-title { font-family:var(--display); font-size:1.05rem; font-weight:600; letter-spacing:0.5px; color:var(--text); line-height:1.2; }
+.dose-formula { font-family:var(--mono); font-size:0.72rem; color:var(--text-dim); margin-top:2px; }
+.dose-repeat { font-family:var(--mono); font-size:0.88rem; color:var(--yellow); margin-top:1px; }
 .dose-result { text-align:right; flex-shrink:0; }
-.dose-mg { font-family:var(–mono); font-size:1.2rem; color:var(–green); font-weight:bold; display:block; line-height:1; }
-.dose-ml { font-family:var(–mono); font-size:0.82rem; color:var(–blue); display:block; margin-top:2px; }
-.dose-fixed { font-family:var(–mono); font-size:0.95rem; color:var(–yellow); display:block; }
-.dose-hint { font-family:var(–mono); font-size:0.7rem; color:var(–text-muted); font-style:italic; }
-.max-warn { display:none; background:rgba(232,59,59,0.09); border:1px solid rgba(232,59,59,0.35); border-radius:6px; padding:5px 9px; margin-top:5px; font-family:var(–mono); font-size:0.76rem; color:var(–accent); }
+.dose-mg { font-family:var(--mono); font-size:1.2rem; color:var(--green); font-weight:bold; display:block; line-height:1; }
+.dose-ml { font-family:var(--mono); font-size:0.82rem; color:var(--blue); display:block; margin-top:2px; }
+.dose-fixed { font-family:var(--mono); font-size:0.95rem; color:var(--yellow); display:block; }
+.dose-hint { font-family:var(--mono); font-size:0.7rem; color:var(--text-muted); font-style:italic; }
+.max-warn { display:none; background:rgba(232,59,59,0.09); border:1px solid rgba(232,59,59,0.35); border-radius:6px; padding:5px 9px; margin-top:5px; font-family:var(--mono); font-size:0.76rem; color:var(--accent); }
 .max-warn.visible { display:block; }
 .med-notes { background:rgba(245,166,35,0.05); border:1px solid rgba(245,166,35,0.18); border-radius:7px; padding:8px 10px; margin-top:9px; font-size:0.82rem; color:#c9a04a; line-height:1.55; }
-.med-notes b { display:block; font-family:var(–mono); font-size:0.68rem; letter-spacing:1.5px; margin-bottom:3px; color:var(–yellow); }
+.med-notes b { display:block; font-family:var(--mono); font-size:0.68rem; letter-spacing:1.5px; margin-bottom:3px; color:var(--yellow); }
 
 /* WEIGHT CONVERTER PAGE */
-.conv-hero { background:var(–surface); border:1px solid var(–border); border-radius:13px; padding:22px 18px 18px; margin-bottom:12px; text-align:center; position:relative; overflow:hidden; }
-.conv-hero::before { content:’’; position:absolute; inset:0; background:radial-gradient(ellipse at 50% -10%,rgba(33,150,243,0.07) 0%,transparent 60%); pointer-events:none; }
-.conv-lbl { font-family:var(–mono); font-size:0.58rem; color:var(–text-dim); letter-spacing:2px; margin-bottom:8px; }
-.conv-big-inp { background:transparent; border:none; border-bottom:2px solid var(–blue); color:var(–blue); font-family:var(–mono); font-size:3.2rem; width:100%; text-align:center; outline:none; padding:5px 0; -webkit-appearance:none; letter-spacing:2px; }
-.conv-big-unit { font-family:var(–display); font-size:0.85rem; font-weight:700; letter-spacing:3px; color:var(–text-dim); margin-top:4px; text-transform:uppercase; }
-.conv-arrow { text-align:center; padding:7px; color:var(–text-muted); font-size:1.3rem; }
-.conv-result { background:var(–blue-dim); border:1px solid rgba(33,150,243,0.22); border-radius:13px; padding:18px; text-align:center; margin-bottom:12px; }
-.conv-result-lbl { font-family:var(–mono); font-size:0.58rem; color:var(–text-dim); letter-spacing:2px; margin-bottom:6px; }
-.conv-result-val { font-family:var(–mono); font-size:3.2rem; color:var(–blue); letter-spacing:2px; line-height:1; text-shadow:0 0 18px rgba(33,150,243,0.4); }
-.conv-result-unit { font-family:var(–display); font-weight:700; letter-spacing:3px; color:var(–text-dim); margin-top:4px; text-transform:uppercase; }
+.conv-hero { background:var(--surface); border:1px solid var(--border); border-radius:13px; padding:22px 18px 18px; margin-bottom:12px; text-align:center; position:relative; overflow:hidden; }
+.conv-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% -10%,rgba(33,150,243,0.07) 0%,transparent 60%); pointer-events:none; }
+.conv-lbl { font-family:var(--mono); font-size:0.58rem; color:var(--text-dim); letter-spacing:2px; margin-bottom:8px; }
+.conv-big-inp { background:transparent; border:none; border-bottom:2px solid var(--blue); color:var(--blue); font-family:var(--mono); font-size:3.2rem; width:100%; text-align:center; outline:none; padding:5px 0; -webkit-appearance:none; letter-spacing:2px; }
+.conv-big-unit { font-family:var(--display); font-size:0.85rem; font-weight:700; letter-spacing:3px; color:var(--text-dim); margin-top:4px; text-transform:uppercase; }
+.conv-arrow { text-align:center; padding:7px; color:var(--text-muted); font-size:1.3rem; }
+.conv-result { background:var(--blue-dim); border:1px solid rgba(33,150,243,0.22); border-radius:13px; padding:18px; text-align:center; margin-bottom:12px; }
+.conv-result-lbl { font-family:var(--mono); font-size:0.58rem; color:var(--text-dim); letter-spacing:2px; margin-bottom:6px; }
+.conv-result-val { font-family:var(--mono); font-size:3.2rem; color:var(--blue); letter-spacing:2px; line-height:1; text-shadow:0 0 18px rgba(33,150,243,0.4); }
+.conv-result-unit { font-family:var(--display); font-weight:700; letter-spacing:3px; color:var(--text-dim); margin-top:4px; text-transform:uppercase; }
 
 /* PEDS CARD */
-.peds-card { background:var(–surface); border:1px solid var(–border); border-radius:13px; padding:15px; margin-bottom:13px; }
-.peds-card h3 { font-family:var(–display); font-size:1.1rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(–green); margin-bottom:11px; }
+.peds-card { background:var(--surface); border:1px solid var(--border); border-radius:13px; padding:15px; margin-bottom:13px; }
+.peds-card h3 { font-family:var(--display); font-size:1.1rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--green); margin-bottom:11px; }
 .peds-row2 { display:grid; grid-template-columns:1fr 1fr auto; gap:8px; align-items:end; }
-.peds-field label { display:block; font-family:var(–mono); font-size:0.57rem; color:var(–text-dim); letter-spacing:1px; margin-bottom:4px; }
-.peds-est-btn { background:rgba(0,200,150,0.1); border:1px solid rgba(0,200,150,0.3); border-radius:7px; color:var(–green); font-family:var(–mono); font-size:0.62rem; padding:10px 11px; letter-spacing:1px; cursor:pointer; white-space:nowrap; width:100%; }
+.peds-field label { display:block; font-family:var(--mono); font-size:0.57rem; color:var(--text-dim); letter-spacing:1px; margin-bottom:4px; }
+.peds-est-btn { background:rgba(0,200,150,0.1); border:1px solid rgba(0,200,150,0.3); border-radius:7px; color:var(--green); font-family:var(--mono); font-size:0.62rem; padding:10px 11px; letter-spacing:1px; cursor:pointer; white-space:nowrap; width:100%; }
 .peds-est-result { background:rgba(0,200,150,0.06); border:1px solid rgba(0,200,150,0.22); border-radius:9px; padding:11px; margin-top:11px; display:none; }
 .peds-est-result.show { display:block; }
 .peds-est-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; text-align:center; }
-.peds-est-item label { font-family:var(–mono); font-size:0.53rem; color:var(–text-dim); letter-spacing:1px; display:block; margin-bottom:3px; }
-.peds-est-item span { font-family:var(–mono); font-size:0.88rem; color:var(–green); }
-.apply-wt-btn { width:100%; margin-top:11px; background:rgba(0,200,150,0.08); border:1px solid rgba(0,200,150,0.32); border-radius:8px; color:var(–green); font-family:var(–mono); font-size:0.67rem; padding:10px; letter-spacing:1px; cursor:pointer; }
+.peds-est-item label { font-family:var(--mono); font-size:0.53rem; color:var(--text-dim); letter-spacing:1px; display:block; margin-bottom:3px; }
+.peds-est-item span { font-family:var(--mono); font-size:0.88rem; color:var(--green); }
+.apply-wt-btn { width:100%; margin-top:11px; background:rgba(0,200,150,0.08); border:1px solid rgba(0,200,150,0.32); border-radius:8px; color:var(--green); font-family:var(--mono); font-size:0.67rem; padding:10px; letter-spacing:1px; cursor:pointer; }
 
 /* MODAL */
 .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:800; backdrop-filter:blur(6px); overflow-y:auto; padding:18px 13px 40px; }
 .modal-overlay.open { display:block; }
-.modal-box { background:var(–surface); border:1px solid var(–border2); border-radius:15px; overflow:hidden; max-width:500px; margin:0 auto; }
-.modal-header { background:var(–surface2); border-bottom:1px solid var(–border); padding:13px 15px; display:flex; align-items:center; justify-content:space-between; }
-.modal-header h2 { font-family:var(–display); font-size:0.95rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(–accent); }
-.modal-close { background:transparent; border:none; color:var(–text-dim); font-size:1.2rem; cursor:pointer; padding:0 4px; line-height:1; }
+.modal-box { background:var(--surface); border:1px solid var(--border2); border-radius:15px; overflow:hidden; max-width:500px; margin:0 auto; }
+.modal-header { background:var(--surface2); border-bottom:1px solid var(--border); padding:13px 15px; display:flex; align-items:center; justify-content:space-between; }
+.modal-header h2 { font-family:var(--display); font-size:0.95rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--accent); }
+.modal-close { background:transparent; border:none; color:var(--text-dim); font-size:1.2rem; cursor:pointer; padding:0 4px; line-height:1; }
 .modal-body { padding:15px; }
 
 /* PASSWORD */
 .pw-gate { text-align:center; padding:8px 0 4px; }
-.pw-gate p { font-size:0.72rem; color:var(–text-dim); margin-bottom:13px; line-height:1.5; }
-.pw-inp { width:100%; background:var(–surface2); border:1px solid var(–border); border-radius:8px; padding:12px; color:var(–text); font-family:var(–mono); font-size:1rem; outline:none; text-align:center; letter-spacing:3px; margin-bottom:10px; -webkit-appearance:none; }
-.pw-inp:focus { border-color:var(–accent); }
-.pw-err { font-family:var(–mono); font-size:0.63rem; color:var(–accent); display:none; margin-bottom:7px; }
+.pw-gate p { font-size:0.72rem; color:var(--text-dim); margin-bottom:13px; line-height:1.5; }
+.pw-inp { width:100%; background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:12px; color:var(--text); font-family:var(--mono); font-size:1rem; outline:none; text-align:center; letter-spacing:3px; margin-bottom:10px; -webkit-appearance:none; }
+.pw-inp:focus { border-color:var(--accent); }
+.pw-err { font-family:var(--mono); font-size:0.63rem; color:var(--accent); display:none; margin-bottom:7px; }
 
 /* ADMIN */
 .admin-panel { display:none; }
 .admin-panel.show { display:block; }
 .admin-tabs { display:flex; gap:4px; margin-bottom:13px; }
-.admin-tab { flex:1; padding:8px; background:transparent; border:1px solid var(–border); border-radius:7px; color:var(–text-dim); font-family:var(–mono); font-size:0.63rem; letter-spacing:1px; cursor:pointer; }
-.admin-tab.active { background:rgba(232,59,59,0.09); border-color:rgba(232,59,59,0.38); color:var(–accent); }
+.admin-tab { flex:1; padding:8px; background:transparent; border:1px solid var(--border); border-radius:7px; color:var(--text-dim); font-family:var(--mono); font-size:0.63rem; letter-spacing:1px; cursor:pointer; }
+.admin-tab.active { background:rgba(232,59,59,0.09); border-color:rgba(232,59,59,0.38); color:var(--accent); }
 .admin-section { display:none; }
 .admin-section.active { display:block; }
 
 /* MED LIST */
-.med-list-item { display:flex; align-items:center; gap:9px; padding:9px 11px; background:var(–surface2); border:1px solid var(–border); border-radius:8px; margin-bottom:6px; }
+.med-list-item { display:flex; align-items:center; gap:9px; padding:9px 11px; background:var(--surface2); border:1px solid var(--border); border-radius:8px; margin-bottom:6px; }
 .med-list-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
-.med-list-name { font-family:var(–display); font-size:0.92rem; font-weight:700; letter-spacing:0.5px; }
-.med-list-class { font-family:var(–mono); font-size:0.57rem; color:var(–text-dim); }
+.med-list-name { font-family:var(--display); font-size:0.92rem; font-weight:700; letter-spacing:0.5px; }
+.med-list-class { font-family:var(--mono); font-size:0.57rem; color:var(--text-dim); }
 .med-list-actions { display:flex; gap:5px; }
-.med-list-btn { background:transparent; border:1px solid var(–border); border-radius:5px; color:var(–text-dim); font-size:0.72rem; padding:5px 8px; cursor:pointer; font-family:var(–mono); }
-.med-list-btn.edit { border-color:rgba(33,150,243,0.38); color:var(–blue); }
-.med-list-btn.del { border-color:rgba(232,59,59,0.28); color:var(–accent); }
-.add-med-btn { width:100%; background:rgba(0,200,150,0.07); border:1px dashed rgba(0,200,150,0.32); border-radius:8px; color:var(–green); font-family:var(–mono); font-size:0.67rem; letter-spacing:1px; padding:11px; cursor:pointer; margin-top:4px; }
+.med-list-btn { background:transparent; border:1px solid var(--border); border-radius:5px; color:var(--text-dim); font-size:0.72rem; padding:5px 8px; cursor:pointer; font-family:var(--mono); }
+.med-list-btn.edit { border-color:rgba(33,150,243,0.38); color:var(--blue); }
+.med-list-btn.del { border-color:rgba(232,59,59,0.28); color:var(--accent); }
+.add-med-btn { width:100%; background:rgba(0,200,150,0.07); border:1px dashed rgba(0,200,150,0.32); border-radius:8px; color:var(--green); font-family:var(--mono); font-size:0.67rem; letter-spacing:1px; padding:11px; cursor:pointer; margin-top:4px; }
 
 /* FORM */
 .form-row { margin-bottom:11px; }
-.form-row label { display:block; font-family:var(–mono); font-size:0.57rem; color:var(–text-dim); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
-.form-inp, .form-sel, .form-textarea { width:100%; background:var(–surface2); border:1px solid var(–border); border-radius:7px; padding:9px 10px; color:var(–text); font-family:var(–mono); font-size:0.8rem; outline:none; -webkit-appearance:none; }
-.form-inp:focus, .form-sel:focus, .form-textarea:focus { border-color:var(–blue); }
+.form-row label { display:block; font-family:var(--mono); font-size:0.57rem; color:var(--text-dim); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:4px; }
+.form-inp, .form-sel, .form-textarea { width:100%; background:var(--surface2); border:1px solid var(--border); border-radius:7px; padding:9px 10px; color:var(--text); font-family:var(--mono); font-size:0.8rem; outline:none; -webkit-appearance:none; }
+.form-inp:focus, .form-sel:focus, .form-textarea:focus { border-color:var(--blue); }
 .form-textarea { min-height:65px; resize:vertical; font-size:0.72rem; line-height:1.5; }
 .form-grid2 { display:grid; grid-template-columns:1fr 1fr; gap:9px; }
 .conc-item { display:flex; gap:6px; align-items:center; margin-bottom:5px; }
 .conc-item .form-inp { flex:1; }
-.conc-del-btn { background:rgba(232,59,59,0.09); border:1px solid rgba(232,59,59,0.28); border-radius:5px; color:var(–accent); font-size:0.78rem; padding:8px 9px; cursor:pointer; flex-shrink:0; }
-.add-conc-btn { background:transparent; border:1px dashed var(–border2); border-radius:6px; color:var(–text-dim); font-family:var(–mono); font-size:0.6rem; padding:7px 11px; cursor:pointer; letter-spacing:1px; width:100%; margin-bottom:9px; }
-.dose-form-section { background:var(–surface2); border:1px solid var(–border); border-radius:8px; padding:11px; margin-bottom:9px; }
-.dose-form-section h4 { font-family:var(–mono); font-size:0.6rem; color:var(–text-dim); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:9px; }
+.conc-del-btn { background:rgba(232,59,59,0.09); border:1px solid rgba(232,59,59,0.28); border-radius:5px; color:var(--accent); font-size:0.78rem; padding:8px 9px; cursor:pointer; flex-shrink:0; }
+.add-conc-btn { background:transparent; border:1px dashed var(--border2); border-radius:6px; color:var(--text-dim); font-family:var(--mono); font-size:0.6rem; padding:7px 11px; cursor:pointer; letter-spacing:1px; width:100%; margin-bottom:9px; }
+.dose-form-section { background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:11px; margin-bottom:9px; }
+.dose-form-section h4 { font-family:var(--mono); font-size:0.6rem; color:var(--text-dim); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:9px; }
 .color-row { display:flex; gap:6px; flex-wrap:wrap; }
 .color-opt { width:26px; height:26px; border-radius:50%; border:2px solid transparent; cursor:pointer; transition:transform 0.15s; }
 .color-opt.selected { border-color:#fff; transform:scale(1.2); }
-.save-btn { width:100%; background:var(–accent); border:none; border-radius:9px; color:#fff; font-family:var(–display); font-size:0.95rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; padding:12px; cursor:pointer; margin-top:4px; box-shadow:0 4px 18px var(–accent-glow); }
+.save-btn { width:100%; background:var(--accent); border:none; border-radius:9px; color:#fff; font-family:var(--display); font-size:0.95rem; font-weight:800; letter-spacing:2px; text-transform:uppercase; padding:12px; cursor:pointer; margin-top:4px; box-shadow:0 4px 18px var(--accent-glow); }
 .save-btn:active { opacity:0.85; }
-.settings-row { display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:1px solid var(–border); }
+.settings-row { display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:1px solid var(--border); }
 .settings-row:last-child { border-bottom:none; }
-.settings-label { font-size:0.78rem; color:var(–text); }
-.settings-sub { font-family:var(–mono); font-size:0.58rem; color:var(–text-dim); margin-top:2px; }
-.settings-inp { background:var(–surface2); border:1px solid var(–border); border-radius:6px; padding:8px 9px; color:var(–text); font-family:var(–mono); font-size:0.72rem; outline:none; width:130px; text-align:right; -webkit-appearance:none; }
+.settings-label { font-size:0.78rem; color:var(--text); }
+.settings-sub { font-family:var(--mono); font-size:0.58rem; color:var(--text-dim); margin-top:2px; }
+.settings-inp { background:var(--surface2); border:1px solid var(--border); border-radius:6px; padding:8px 9px; color:var(--text); font-family:var(--mono); font-size:0.72rem; outline:none; width:130px; text-align:right; -webkit-appearance:none; }
 
 /* PATIENT TYPE TOGGLE */
 .pt-toggle {
-display: flex;
-gap: 0;
-background: var(–surface2);
-border: 1px solid var(–border);
-border-radius: 9px;
-padding: 3px;
-margin-bottom: 13px;
+  display: flex;
+  gap: 0;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 3px;
+  margin-bottom: 13px;
 }
 .pt-btn {
-flex: 1;
-padding: 9px 8px;
-border: none;
-border-radius: 7px;
-background: transparent;
-color: var(–text-muted);
-font-family: var(–display);
-font-size: 0.92rem;
-font-weight: 700;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-cursor: pointer;
-transition: all 0.2s;
+  flex: 1;
+  padding: 9px 8px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 .pt-btn.active-adult {
-background: var(–accent);
-color: #fff;
-box-shadow: 0 2px 12px var(–accent-glow);
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 12px var(--accent-glow);
 }
 .pt-btn.active-peds {
-background: var(–green);
-color: #03221a;
-box-shadow: 0 2px 12px rgba(0,200,150,0.35);
+  background: var(--green);
+  color: #03221a;
+  box-shadow: 0 2px 12px rgba(0,200,150,0.35);
 }
+
 
 /* SYNC STATUS BAR */
 .sync-bar {
-display: flex;
-align-items: center;
-gap: 8px;
-background: var(–surface2);
-border: 1px solid var(–border);
-border-radius: 8px;
-padding: 8px 12px;
-margin-bottom: 12px;
-font-family: var(–mono);
-font-size: 0.65rem;
-color: var(–text-dim);
-letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
 }
 .sync-dot {
-width: 7px; height: 7px;
-border-radius: 50%;
-background: var(–text-muted);
-flex-shrink: 0;
-transition: background 0.3s;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+  transition: background 0.3s;
 }
-.sync-dot.ok { background: var(–green); box-shadow: 0 0 6px rgba(0,200,150,0.5); }
-.sync-dot.err { background: var(–accent); box-shadow: 0 0 6px var(–accent-glow); }
-.sync-dot.loading { background: var(–yellow); animation: pulse-dot 1s ease-in-out infinite; }
+.sync-dot.ok { background: var(--green); box-shadow: 0 0 6px rgba(0,200,150,0.5); }
+.sync-dot.err { background: var(--accent); box-shadow: 0 0 6px var(--accent-glow); }
+.sync-dot.loading { background: var(--yellow); animation: pulse-dot 1s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100%{opacity:0.4;} 50%{opacity:1;} }
 .sync-spacer { flex: 1; }
 .sync-btn {
-background: transparent;
-border: 1px solid var(–border2);
-border-radius: 5px;
-color: var(–text-dim);
-font-family: var(–mono);
-font-size: 0.6rem;
-padding: 4px 8px;
-cursor: pointer;
-letter-spacing: 0.5px;
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  padding: 4px 8px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
 }
 .sync-btn:active { opacity: 0.7; }
 
-.empty-state { text-align:center; padding:28px 18px; color:var(–text-muted); font-family:var(–mono); font-size:0.67rem; letter-spacing:1px; }
+.empty-state { text-align:center; padding:28px 18px; color:var(--text-muted); font-family:var(--mono); font-size:0.67rem; letter-spacing:1px; }
 .safe-bottom { height:20px; }
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance:none; }
 ::-webkit-scrollbar { width:3px; }
-::-webkit-scrollbar-thumb { background:var(–border2); border-radius:2px; }
+::-webkit-scrollbar-thumb { background:var(--border2); border-radius:2px; }
 
 /* ── ANDROID / CHROME FORM ELEMENT FIX ── */
 /* Force all inputs, selects, textareas to respect dark theme */
 input, select, textarea, button {
-color-scheme: dark;
-color: var(–text);
-background-color: var(–surface2);
+  color-scheme: dark;
+  color: var(--text);
+  background-color: var(--surface2);
 }
 /* Override any browser-injected autofill yellow */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
--webkit-text-fill-color: var(–text) !important;
--webkit-box-shadow: 0 0 0px 1000px var(–surface2) inset !important;
-transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--text) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--surface2) inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 /* Select elements — force dark on ALL platforms */
 select {
-color: var(–text) !important;
-background-color: var(–surface2) !important;
-border-color: var(–border) !important;
+  color: var(--text) !important;
+  background-color: var(--surface2) !important;
+  border-color: var(--border) !important;
 }
 select option {
-color: var(–text) !important;
-background-color: var(–surface) !important;
+  color: var(--text) !important;
+  background-color: var(--surface) !important;
 }
 /* Concentration selector specifically */
 .conc-sel {
-color: var(–blue) !important;
-background-color: var(–surface2) !important;
+  color: var(--blue) !important;
+  background-color: var(--surface2) !important;
 }
 .conc-sel option {
-color: var(–text) !important;
-background-color: var(–surface) !important;
+  color: var(--text) !important;
+  background-color: var(--surface) !important;
 }
 /* field-inp selects (peds age unit selector etc) */
-.field-inp[type=“text”],
-.field-inp[type=“number”],
+.field-inp[type="text"],
+.field-inp[type="number"],
 select.field-inp {
-color: var(–text) !important;
-background-color: var(–surface2) !important;
+  color: var(--text) !important;
+  background-color: var(--surface2) !important;
 }
 /* form-sel and form-inp in admin editor */
 .form-inp, .form-sel, .form-textarea {
-color: var(–text) !important;
-background-color: var(–surface2) !important;
+  color: var(--text) !important;
+  background-color: var(--surface2) !important;
 }
 /* settings inputs */
 .settings-inp {
-color: var(–text) !important;
-background-color: var(–surface2) !important;
+  color: var(--text) !important;
+  background-color: var(--surface2) !important;
 }
 /* password inputs */
 .pw-inp {
-color: var(–text) !important;
-background-color: var(–surface2) !important;
+  color: var(--text) !important;
+  background-color: var(--surface2) !important;
 }
 /* big converter input */
 .conv-big-inp {
-color: var(–blue) !important;
+  color: var(--blue) !important;
 }
 /* admin btn */
 .admin-btn {
-color: var(–text-dim) !important;
-background-color: transparent !important;
+  color: var(--text-dim) !important;
+  background-color: transparent !important;
 }
 /* sync btn */
 .sync-btn {
-color: var(–text-dim) !important;
-background-color: transparent !important;
+  color: var(--text-dim) !important;
+  background-color: transparent !important;
 }
 /* nav tabs */
 .nav-tab {
-color: var(–text-muted) !important;
-background-color: transparent !important;
+  color: var(--text-muted) !important;
+  background-color: transparent !important;
 }
 .nav-tab.active {
-color: var(–accent) !important;
+  color: var(--accent) !important;
 }
 /* patient type buttons */
 .pt-btn {
-color: var(–text-muted) !important;
-background-color: transparent !important;
+  color: var(--text-muted) !important;
+  background-color: transparent !important;
 }
 .pt-btn.active-adult {
-color: #fff !important;
-background-color: var(–accent) !important;
+  color: #fff !important;
+  background-color: var(--accent) !important;
 }
 .pt-btn.active-peds {
-color: #03221a !important;
-background-color: var(–green) !important;
+  color: #03221a !important;
+  background-color: var(--green) !important;
 }
 /* modal close */
 .modal-close {
-color: var(–text-dim) !important;
-background-color: transparent !important;
+  color: var(--text-dim) !important;
+  background-color: transparent !important;
 }
 /* admin tabs */
 .admin-tab {
-color: var(–text-dim) !important;
-background-color: transparent !important;
+  color: var(--text-dim) !important;
+  background-color: transparent !important;
 }
 .admin-tab.active {
-color: var(–accent) !important;
+  color: var(--accent) !important;
 }
 /* peds estimate button */
 .peds-est-btn {
-color: var(–green) !important;
+  color: var(--green) !important;
 }
 /* apply weight button */
 .apply-wt-btn {
-color: var(–green) !important;
+  color: var(--green) !important;
 }
 /* add med button */
 .add-med-btn {
-color: var(–green) !important;
-background-color: transparent !important;
+  color: var(--green) !important;
+  background-color: transparent !important;
 }
 /* add conc button */
 .add-conc-btn {
-color: var(–text-dim) !important;
-background-color: transparent !important;
+  color: var(--text-dim) !important;
+  background-color: transparent !important;
 }
 /* conc del button */
 .conc-del-btn {
-color: var(–accent) !important;
+  color: var(--accent) !important;
 }
 /* save button */
 .save-btn {
-color: #fff !important;
-background-color: var(–accent) !important;
+  color: #fff !important;
+  background-color: var(--accent) !important;
 }
 /* med list buttons */
-.med-list-btn.edit { color: var(–blue) !important; background-color: transparent !important; }
-.med-list-btn.del { color: var(–accent) !important; background-color: transparent !important; }
+.med-list-btn.edit { color: var(--blue) !important; background-color: transparent !important; }
+.med-list-btn.del { color: var(--accent) !important; background-color: transparent !important; }
 /* General text elements that might go dark */
 .med-name-wrap, .dose-info, .dose-result,
 .wb-label, .wb-field label, .disclaimer-text,
@@ -430,7 +430,7 @@ background-color: var(–accent) !important;
 .settings-label, .settings-sub,
 .sync-bar, #sync-status,
 .empty-state {
--webkit-text-fill-color: unset;
+  -webkit-text-fill-color: unset;
 }
 
 </style>
@@ -455,7 +455,6 @@ background-color: var(–accent) !important;
 </div>
 
 <!-- ═══ DOSING PAGE ═══ -->
-
 <div class="page active" id="page-dosing">
   <div class="weight-bar">
     <div class="wb-label">▸ PATIENT WEIGHT</div>
@@ -477,7 +476,6 @@ background-color: var(–accent) !important;
   </div>
 
   <!-- PATIENT TYPE TOGGLE -->
-
   <div class="pt-toggle">
     <button class="pt-btn active-adult" id="pt-adult-btn" onclick="setPatientType('adult')">👨 Adult</button>
     <button class="pt-btn" id="pt-peds-btn" onclick="setPatientType('peds')">👶 Pediatric</button>
@@ -494,7 +492,6 @@ background-color: var(–accent) !important;
 </div>
 
 <!-- ═══ WEIGHT PAGE ═══ -->
-
 <div class="page" id="page-weight">
   <div class="conv-hero">
     <div class="conv-lbl">▸ ENTER WEIGHT IN POUNDS</div>
@@ -526,7 +523,6 @@ background-color: var(–accent) !important;
 </div>
 
 <!-- ═══ PEDS PAGE ═══ -->
-
 <div class="page" id="page-peds">
   <div class="peds-card">
     <h3>👶 Pediatric Weight Estimator</h3>
@@ -551,7 +547,6 @@ background-color: var(–accent) !important;
 </div>
 
 <!-- ═══ ADMIN MODAL ═══ -->
-
 <div class="modal-overlay" id="admin-modal">
   <div class="modal-box">
     <div class="modal-header">
@@ -593,7 +588,6 @@ background-color: var(–accent) !important;
 </div>
 
 <!-- ═══ MED EDITOR MODAL ═══ -->
-
 <div class="modal-overlay" id="med-editor-modal">
   <div class="modal-box">
     <div class="modal-header">
@@ -618,46 +612,43 @@ background-color: var(–accent) !important;
         </div>
       </div>
 
-```
-  <div class="form-row">
-    <label>Concentrations We Carry</label>
-    <div id="ef-conc-list"></div>
-    <button class="add-conc-btn" onclick="addConcField()">+ ADD CONCENTRATION</button>
-  </div>
+      <div class="form-row">
+        <label>Concentrations We Carry</label>
+        <div id="ef-conc-list"></div>
+        <button class="add-conc-btn" onclick="addConcField()">+ ADD CONCENTRATION</button>
+      </div>
 
-  <div class="dose-form-section">
-    <h4>Adult Doses</h4>
-    <div class="form-row"><label>Dose Label / Name</label><input type="text" class="form-inp" id="ef-adult-init" placeholder="e.g. Cardiac Arrest, Pain Management"></div>
-    <div class="form-grid2">
-      <div class="form-row"><label>Weight-based (mg/kg)<br><span style="color:var(--text-muted);font-size:0.5rem;">Leave blank if fixed dose</span></label><input type="number" class="form-inp" id="ef-adult-mgkg" placeholder="e.g. 0.01" inputmode="decimal" step="any"></div>
-      <div class="form-row"><label>Fixed Dose<br><span style="color:var(--text-muted);font-size:0.5rem;">Used if no mg/kg value</span></label><input type="text" class="form-inp" id="ef-adult-fixed" placeholder="e.g. 324 mg, 1 mg"></div>
-    </div>
-    <div class="form-grid2">
-      <div class="form-row"><label>Max Dose (mg)</label><input type="number" class="form-inp" id="ef-adult-max" placeholder="e.g. 3" inputmode="decimal"></div>
-      <div class="form-row"><label>Route</label><input type="text" class="form-inp" id="ef-adult-route" placeholder="e.g. IV/IO/IM"></div>
-    </div>
-    <div class="form-row" style="margin-bottom:0"><label>Repeat Dose Instructions</label><input type="text" class="form-inp" id="ef-adult-repeat" placeholder="e.g. q5 min × 3, q3–5 min prn"></div>
-  </div>
+      <div class="dose-form-section">
+        <h4>Adult Doses</h4>
+        <div class="form-row"><label>Dose Label / Name</label><input type="text" class="form-inp" id="ef-adult-init" placeholder="e.g. Cardiac Arrest, Pain Management"></div>
+        <div class="form-grid2">
+          <div class="form-row"><label>Weight-based (mg/kg)<br><span style="color:var(--text-muted);font-size:0.5rem;">Leave blank if fixed dose</span></label><input type="number" class="form-inp" id="ef-adult-mgkg" placeholder="e.g. 0.01" inputmode="decimal" step="any"></div>
+          <div class="form-row"><label>Fixed Dose<br><span style="color:var(--text-muted);font-size:0.5rem;">Used if no mg/kg value</span></label><input type="text" class="form-inp" id="ef-adult-fixed" placeholder="e.g. 324 mg, 1 mg"></div>
+        </div>
+        <div class="form-grid2">
+          <div class="form-row"><label>Max Dose (mg)</label><input type="number" class="form-inp" id="ef-adult-max" placeholder="e.g. 3" inputmode="decimal"></div>
+          <div class="form-row"><label>Route</label><input type="text" class="form-inp" id="ef-adult-route" placeholder="e.g. IV/IO/IM"></div>
+        </div>
+        <div class="form-row" style="margin-bottom:0"><label>Repeat Dose Instructions</label><input type="text" class="form-inp" id="ef-adult-repeat" placeholder="e.g. q5 min × 3, q3–5 min prn"></div>
+      </div>
 
-  <div class="dose-form-section">
-    <h4>Pediatric Doses</h4>
-    <div class="form-row"><label>Dose Label / Name</label><input type="text" class="form-inp" id="ef-peds-init" placeholder="e.g. Initial Dose, Hypoglycemia"></div>
-    <div class="form-grid2">
-      <div class="form-row"><label>Weight-based (mg/kg)</label><input type="number" class="form-inp" id="ef-peds-mgkg" placeholder="e.g. 0.01" inputmode="decimal" step="any"></div>
-      <div class="form-row"><label>Fixed Dose</label><input type="text" class="form-inp" id="ef-peds-fixed" placeholder="e.g. Contraindicated"></div>
-    </div>
-    <div class="form-grid2">
-      <div class="form-row"><label>Max Dose (mg)</label><input type="number" class="form-inp" id="ef-peds-max" placeholder="e.g. 1" inputmode="decimal"></div>
-      <div class="form-row"><label>Route</label><input type="text" class="form-inp" id="ef-peds-route" placeholder="e.g. IM/IN"></div>
-    </div>
-    <div class="form-row" style="margin-bottom:0"><label>Repeat Dose Instructions</label><input type="text" class="form-inp" id="ef-peds-repeat" placeholder="e.g. q2–3 min prn"></div>
-  </div>
+      <div class="dose-form-section">
+        <h4>Pediatric Doses</h4>
+        <div class="form-row"><label>Dose Label / Name</label><input type="text" class="form-inp" id="ef-peds-init" placeholder="e.g. Initial Dose, Hypoglycemia"></div>
+        <div class="form-grid2">
+          <div class="form-row"><label>Weight-based (mg/kg)</label><input type="number" class="form-inp" id="ef-peds-mgkg" placeholder="e.g. 0.01" inputmode="decimal" step="any"></div>
+          <div class="form-row"><label>Fixed Dose</label><input type="text" class="form-inp" id="ef-peds-fixed" placeholder="e.g. Contraindicated"></div>
+        </div>
+        <div class="form-grid2">
+          <div class="form-row"><label>Max Dose (mg)</label><input type="number" class="form-inp" id="ef-peds-max" placeholder="e.g. 1" inputmode="decimal"></div>
+          <div class="form-row"><label>Route</label><input type="text" class="form-inp" id="ef-peds-route" placeholder="e.g. IM/IN"></div>
+        </div>
+        <div class="form-row" style="margin-bottom:0"><label>Repeat Dose Instructions</label><input type="text" class="form-inp" id="ef-peds-repeat" placeholder="e.g. q2–3 min prn"></div>
+      </div>
 
-  <div class="form-row"><label>Clinical Notes / Warnings</label><textarea class="form-textarea" id="ef-notes" placeholder="Contraindications, warnings, administration tips..."></textarea></div>
-  <button class="save-btn" onclick="saveMed()">SAVE MEDICATION</button>
-</div>
-```
-
+      <div class="form-row"><label>Clinical Notes / Warnings</label><textarea class="form-textarea" id="ef-notes" placeholder="Contraindications, warnings, administration tips..."></textarea></div>
+      <button class="save-btn" onclick="saveMed()">SAVE MEDICATION</button>
+    </div>
   </div>
 </div>
 
@@ -1033,9 +1024,8 @@ window.addEventListener('load', () => {
 // ═══════════════════════════ RENDER MEDS ═══════════════════════════
 function fmtNum(n) {
   if (n===null||isNaN(n)) return '—';
-  if (n>=100) return Math.round(n).toString();
-  if (n>=10) return parseFloat(n.toFixed(1)).toString();
-  return parseFloat(n.toFixed(3)).toString();
+  // Never exceed one decimal place regardless of value
+  return parseFloat(n.toFixed(1)).toString();
 }
 
 function renderMeds() {
@@ -1288,6 +1278,5 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
-
 </body>
 </html>
