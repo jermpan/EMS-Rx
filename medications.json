@@ -258,11 +258,11 @@
       "color": "#ec4899",
       "concentrations": [
         {
-          "label": "500 mg/10 mL (50 mg/mL)",
-          "mgPerMl": 50
+          "label": "500 mg/5 mL (100 mg/mL)",
+          "mgPerMl": 100
         },
         {
-          "label": "200 mg/20 mL (10 mg/mL)",
+          "label": "",
           "mgPerMl": 10
         }
       ],
@@ -291,11 +291,11 @@
       "color": "#f472b6",
       "concentrations": [
         {
-          "label": "500 mg/10 mL (50 mg/mL)",
-          "mgPerMl": 50
+          "label": "500 mg/5 mL (100 mg/mL)",
+          "mgPerMl": 100
         },
         {
-          "label": "200 mg/20 mL (10 mg/mL)",
+          "label": "",
           "mgPerMl": 10
         }
       ],
