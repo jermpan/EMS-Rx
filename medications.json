@@ -280,7 +280,7 @@
         "maxDose": 5,
         "route": "IV/IM/IN"
       },
-      "notes": "ADULT sedation: 2.5 mg IV. Seizure: 2.5 mg IV or 5 mg IM/IN, may repeat ×1 in 5 min. PEDS: 0.1 mg/kg IV (max 2.5 mg) or 0.2 mg/kg IM/IN (max 5 mg). Monitor for respiratory depression and hypotension."
+      "notes": "ADULT sedation: 2.5 mg IV. Seizure: 2.5 mg IV or 5 mg IM/IN, may repeat ×1 in 5 min. PEDS: 0.1 mg/kg IV (max 5 mg) or 0.2 mg/kg IM/IN (max 10 mg). Monitor for respiratory depression and hypotension."
     },
     {
       "id": 8,
